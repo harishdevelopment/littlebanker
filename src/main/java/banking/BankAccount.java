@@ -15,7 +15,6 @@ public class BankAccount {
 
     public BankAccount(Long bankBalance) {
         this.bankBalance = bankBalance;
-        System.out.println("New Bank account created...");
     }
 
     protected BankAccount() {
