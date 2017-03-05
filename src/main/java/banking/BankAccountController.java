@@ -21,7 +21,7 @@ public class BankAccountController {
     ResponseEntity<BankAccount> getAccountBalance(@PathVariable("accountNumber") Long accountNumber){
         this.validateBankAccount(accountNumber);
         Optional<BankAccount> bankAccount = this.bankAccountRepository.findByAccountNumber(accountNumber);
-        return new ResponseEntity<BankAccount>(bankAccount.get(), HttpStatus.OK);
+        return new ResponseEntity<>(bankAccount.get(), HttpStatus.OK);
     }
 
     @RequestMapping(value = "/account/", method = RequestMethod.POST)

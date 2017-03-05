@@ -4,7 +4,6 @@ import banking.BankAccount;
 import banking.BankAccountNotFoundException;
 import banking.BankAccountRepository;
 import banking.LittleBankApplication;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
