@@ -20,7 +20,9 @@ Please follow the below steps to run locally
 ~~~~~~~~~
 curl -H "Content-Type: application/json" -X POST -d '{"bankBalance": 100}' http://localhost:8080/account/
 ~~~~~~~~~
-3. Execute the below to retrive the created account
+4. Execute the below to retrive the created account
 ~~~~~~~~~
 curl -H "Content-Type: application/json" -X GET http://localhost:8080/account/1
 ~~~~~~~~~
+
+The application also has been deployed in OpenShift @ http://littlebanker-harishkumar.rhcloud.com
