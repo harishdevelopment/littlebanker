@@ -1,4 +1,3 @@
-import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
 
 import banking.BankAccount;
@@ -21,24 +20,18 @@ import java.util.Optional;
 @DataJpaTest
 public class BankAccountRepositoryTests {
 
-    BankAccount bankAccount1;
-
     @Autowired
     private TestEntityManager entityManager;
 
     @Autowired
     private BankAccountRepository bankAccountRepository;
 
-    @Before
-    public void setUp() throws Exception {
-        bankAccount1 = new BankAccount(100L);
-        entityManager.persist(bankAccount1);
-    }
-
     @Test
     public void testFindByAccountNumber() throws Exception {
+        BankAccount bankAccount = new BankAccount(100L);
+        entityManager.persist(bankAccount);
         Optional<BankAccount> findByAccountNumber = bankAccountRepository.findByAccountNumber(1L);
-        assertEquals(bankAccount1.getBankBalance(), findByAccountNumber.map(BankAccount::getBankBalance).get());
+        assertEquals(bankAccount.getBankBalance(), findByAccountNumber.map(BankAccount::getBankBalance).get());
         System.out.println("findByAccountNumber.getBankBalance()" + findByAccountNumber.map(BankAccount::getBankBalance));
     }
 
