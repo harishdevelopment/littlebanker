@@ -18,11 +18,11 @@ Please follow the below steps to run locally
 1. Check out the code from github and execute "mvn clean compile spring-boot:run" to launch the application
 2. Execute the below to create a new bank account
 ~~~~~~~~~
-curl -H "Content-Type: application/json" -X POST -d '{"bankBalance": 100}' http://localhost:8080/account/
+curl -H "Content-Type: application/json" -X POST -d '{"bankBalance": 100}' http://localhost:33333/account/
 ~~~~~~~~~
 3. Execute the below to retrieve the created account
 ~~~~~~~~~
-curl -H "Content-Type: application/json" -X GET http://localhost:8080/account/1
+curl -H "Content-Type: application/json" -X GET http://localhost:33333/account/1
 ~~~~~~~~~
 
 The application also has been deployed in OpenShift @ http://littlebanker-harishkumar.rhcloud.com
