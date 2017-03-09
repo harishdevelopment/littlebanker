@@ -13,7 +13,7 @@ public class BankAccountController {
     private final BankAccountRepository bankAccountRepository;
 
     @Autowired
-    public BankAccountController(BankAccountRepository bankAccountRepository) {
+    BankAccountController(BankAccountRepository bankAccountRepository) {
         this.bankAccountRepository = bankAccountRepository;
     }
 

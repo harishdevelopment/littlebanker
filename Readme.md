@@ -20,7 +20,7 @@ Please follow the below steps to run locally
 ~~~~~~~~~
 curl -H "Content-Type: application/json" -X POST -d '{"bankBalance": 100}' http://localhost:8080/account/
 ~~~~~~~~~
-4. Execute the below to retrive the created account
+3. Execute the below to retrieve the created account
 ~~~~~~~~~
 curl -H "Content-Type: application/json" -X GET http://localhost:8080/account/1
 ~~~~~~~~~
